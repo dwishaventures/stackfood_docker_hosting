@@ -1,4 +1,5 @@
-FROM php:8.1.3-fpm-alpine3.15
+#FROM php:8.1.3-fpm-alpine3.15
+php:7.4-fpm-alpine3.16
 
 ENV NGINX_VERSION 1.20.2
 ENV NJS_VERSION   0.7.0
@@ -21,6 +22,16 @@ RUN docker-php-ext-install \
     gd \
     pcntl \
     bcmath \
+    Ctype \
+    JSON \
+    Mbstring \            
+    OpenSSL \    
+    PDO \    
+    Tokenizer \    
+    XML \                
+    zip \      
+    fileinfo \      
+    sodium \      
     mysqli \
     pdo_mysql
 
